@@ -1,0 +1,45 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Moja strona z Bootstrapem
+        // Odwołanie do pliku CSS Bootstrapa
+        link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", rel="stylesheet")
+        // Opcjonalne odwołanie do arkusza stylów niestandardowych
+        link(href="css/style.css", rel="stylesheet")
+        // Opcjonalne odwołanie do skryptu JavaScript Bootstrapa
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
+    body
+        .custom-padding-gallery
+            .container-fluid
+                .row
+                    .col
+                        .background-container.gy-8
+                            h1.text-center Dzięki tej stronie policzysz
+                .row
+                    .col
+                        .background-container.gy-8
+                            h1.text-center dzienne spożycie kalorii : )
+                .row
+                    .col
+                        .background-container.gy-8
+                            h2.text-center 1. Wprowadź posiłki i ich kaloryczność lub wyszukaj je
+                            p.text-center Dzięki temu dobierzesz dania do swojej diety
+                    .col
+                        .background-container.gy-8
+                            h2.text-center 2. Wpisz w poszczególne wiersze danie i jego ilosć
+                            p.text-center Strona przeliczy kaloryczność wybranych dań
+                    .col
+                        .background-container.gy-8
+                            h2.text-center 3. Sprawdź wynik naszego kalkulatora
+                            p.text-center ... i ciesz się świadomościa kaloryczności swojej diety
+        .row
+            .col.text-center
+                a.btn.btn-primary(href="add") Tutaj wprowadzisz produkty
+            .col.text-center
+                a.btn.btn-secondary(href="calculate") Tutaj przeliczysz dietę
+
+    // Skrypty JavaScript (jeśli potrzebne)
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js")

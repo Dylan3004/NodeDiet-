@@ -1,0 +1,93 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Moja strona z Bootstrapem
+        // Odwołanie do pliku CSS Bootstrapa
+        link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", rel="stylesheet")
+        // Opcjonalne odwołanie do arkusza stylów niestandardowych
+        link(href="css/style.css", rel="stylesheet")
+        // Opcjonalne odwołanie do skryptu JavaScript Bootstrapa
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
+        // Skrypt JavaScript do obsługi okna pop-up
+        script.
+            document.addEventListener('DOMContentLoaded', function() {
+                // Nasłuchujemy kliknięcia na przycisku z id="showPopupButton"
+                document.querySelector('#showPopupButton').addEventListener('click', function() {
+                    // Wyświetlamy okno pop-up z komunikatem
+                    alert('Poprawnie dodano produkt!');
+                });
+            });
+    body
+        .custom-padding-gallery
+            .container-fluid
+                .row
+                    .col
+                        .background-container.gy-8
+                            h1.text-center Wprowadź swój produkt
+        .custom-padding-gallery
+            form(method="post", action="/adding")
+                .custom-container
+                    .form-row
+                        .col
+                            label(for="field1") Danie
+                            input(type="text", class="form-control", id="field1", placeholder="Wpisz zawartość", name="Danie")
+                        .col
+                            label(for="field2") liczba kalorii na 100 g
+                            input(type="text", class="form-control", id="field2", placeholder="Wpisz zawartość", name="Kalorie")
+                    .form-row
+                        // Dodajemy przycisk z id="showPopupButton", który wyświetli okno pop-up
+                        button#showPopupButton.btn.btn-secondary(type="submit") Okej
+        .row
+            .col.text-center
+                a.btn.btn-primary(href="/") Strona główna
+            .col.text-center
+                a.btn.btn-secondary(href="calculate") Tutaj przeliczysz dietę
+
+    // Skrypty JavaScript (jeśli potrzebne)
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js")
+
+
+//doctype html
+//html(lang="en")
+//    head
+//        meta(charset="UTF-8")
+//        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+//        title Moja strona z Bootstrapem
+//        // Odwołanie do pliku CSS Bootstrapa
+//        link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", rel="stylesheet")
+//        // Opcjonalne odwołanie do arkusza stylów niestandardowych
+//        link(href="css/style.css", rel="stylesheet")
+//        // Opcjonalne odwołanie do skryptu JavaScript Bootstrapa
+//        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
+//    body
+//        .custom-padding-gallery
+//            .container-fluid
+//                .row
+//                    .col
+//                        .background-container.gy-8
+//                            h1.text-center Wprowadź swój produkt
+//        .custom-padding-gallery
+//            form(method="post", action="/adding")
+//                .custom-container
+//                    .form-row
+//                        .col
+//                            label(for="field1") Danie
+//                            input(type="text", class="form-control", id="field1", placeholder="Wpisz zawartość", name="Danie")
+//                        .col
+//                            label(for="field2") liczba kalorii na 100 g
+//                            input(type="text", class="form-control", id="field2", placeholder="Wpisz zawartość", name="Kalorie")
+//                    .form-row
+//                        button.btn.btn-secondary(type="submit") Okej
+//        .row
+//            .col.text-center
+//                a.btn.btn-primary(href="/") Strona główna
+//            .col.text-center
+//                a.btn.btn-secondary(href="calculate") Tutaj przeliczysz dietę
+//
+//    // Skrypty JavaScript (jeśli potrzebne)
+//    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+//    script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js")
+//

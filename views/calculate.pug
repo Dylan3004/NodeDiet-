@@ -1,0 +1,55 @@
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Moja strona z Bootstrapem
+        link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css", rel="stylesheet")
+        link(href="css/style.css", rel="stylesheet")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
+    style.
+
+    body
+        .custom-padding-gallery
+            .container-fluid
+                .row
+                    .col
+                        .background-container.gy-8
+                            h1.text-center Przelicz swoją dietę
+        .custom-padding-gallery
+            form(method="post", action="/calculating")
+                .custom-container
+                    .form-row
+                        .col
+                            label(for="field1") Śniadanie
+                            input.form-control(type="text", id="field1", placeholder="Wpisz zawartość", name="Sniadanie")
+                        .col
+                            label(for="field2") [g]
+                            input.form-control(type="text", id="field2", placeholder="Wpisz zawartość", name="Sniadanie_ilosc")
+                    .form-row
+                        .col
+                            label(for="field3") Obiad
+                            input.form-control(type="text", id="field3", placeholder="Wpisz zawartość", name="Obiad")
+                        .col
+                            label(for="field4") [g]
+                            input.form-control(type="text", id="field4", placeholder="Wpisz zawartość", name="Obiad_ilosc")
+                    .form-row
+                        .col
+                            label(for="field5") Kolacja
+                            input.form-control(type="text", id="field5", placeholder="Wpisz zawartość", name="Kolacja")
+                        .col
+                            label(for="field6") [g]
+                            input.form-control(type="text", id="field6", placeholder="Wpisz zawartość", name="Kolacja_ilosc")
+                    .form-row
+                        button.btn.btn-secondary(type="submit") Okej
+        .row
+            .col.text-center
+                a.btn.btn-primary(href="/") Strona główna
+            .col.text-center
+                a.btn.btn-secondary(href="add") Tutaj wprowadzisz swój produkt
+
+        // Skrypty JavaScript (jeśli potrzebne)
+        script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js")
+
